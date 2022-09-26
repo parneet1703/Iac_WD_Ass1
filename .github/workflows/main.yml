@@ -16,7 +16,6 @@ on:
       first_num:
         description: 'first_num'
         required: true
-        default: 'warning'
   #     second_num:
   #       description: 'second_num'
   #       required: true
@@ -38,7 +37,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: 
-          python pyprime.py
+          # python pyprime.py
+          ${{ github.event.inputs.first_num }} 
 
       # Runs a set of commands using the runners shell
       # - name: Run a multi-line script
