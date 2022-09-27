@@ -31,15 +31,20 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
         # run: 
         #   python pyprime.py
-        uses: actions/checkout@v3
-        with:
-          first_num: ${{ inputs.first_num }}
-          path: ./pyprime.py
+        # uses: actions/checkout@v3
+        # with:
+        #   first_num: ${{ inputs.first_num }}
+        #   second_num: ${{ inputs.second_num }}
+        #   path: ./pyprime.py
+        run:
+          python pyprime.py ${{github.event.inputs.first_num}} ${{github.event.inputs.second_num}}
 
       # Runs a set of commands using the runners shell
       # - name: Run a multi-line script
