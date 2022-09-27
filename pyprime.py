@@ -1,7 +1,7 @@
 import sys
 
-first_num = int(sys.argv[1])
-second_num = int(sys.argv[2])
+first_num = int(sys.argv[0])
+second_num = int(sys.argv[1])
 
 # first_num = 5
 # second_num = 11
