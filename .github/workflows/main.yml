@@ -36,8 +36,8 @@ jobs:
       - name: Run a one-line script
         run: 
           python pyprime.py
-        # with:
-        #   echo "first_num:${{ github.event.inputs.first_num }}"
+        with:
+          first_num: ${{ inputs.first_num }}
 
       # Runs a set of commands using the runners shell
       # - name: Run a multi-line script
