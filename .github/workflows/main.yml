@@ -33,7 +33,8 @@ jobs:
       
       # Runs a single command using the runners shell
       - name: Run a python script
-        run:
+        run: |
           python pyprime.py $Number_one $Number_two
+          python addition.py $Number_one $Number_two
 
       
