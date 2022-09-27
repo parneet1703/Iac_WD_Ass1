@@ -3,15 +3,16 @@
 name: CI
 
 # Controls when the workflow will run
+env:
+  Number_one: github.event.inputs.first_num
+  Number_two: github.event.inputs.second_num
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   # push:
   #   branches: [ "main" ]
   # pull_request:
   #   branches: [ "main" ]
-env:
-  Number_one: github.event.inputs.first_num
-  Number_two: github.event.inputs.second_num
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
