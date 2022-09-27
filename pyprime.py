@@ -12,5 +12,5 @@ for num in range(first_num, second_num+1):
             if(num%i==0):
                 break
         else:
-            print("prime numbers: ", num)
+            print("prime number: ", num)
             
