@@ -7,12 +7,6 @@ env:
   Number_one: ${{github.event.inputs.first_num}}
   Number_two: ${{github.event.inputs.second_num}}
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  # push:
-  #   branches: [ "main" ]
-  # pull_request:
-  #   branches: [ "main" ]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
@@ -38,19 +32,8 @@ jobs:
           python-version: 3.9
       
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        # run: 
-        #   python pyprime.py
-        # uses: actions/checkout@v3
-        # with:
-        #   first_num: ${{ inputs.first_num }}
-        #   second_num: ${{ inputs.second_num }}
-        #   path: ./pyprime.py
+      - name: Run a python script
         run:
           python pyprime.py $Number_one $Number_two
 
-      # Runs a set of commands using the runners shell
-      # - name: Run a multi-line script
-      #   run: |
-      #     echo Add other actions to build,
-      #     echo test, and deploy your project.
+      
