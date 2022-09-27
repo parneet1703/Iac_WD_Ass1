@@ -1,10 +1,10 @@
-# import sys
+import sys
 
-# first_num = int(sys.argv[1])
-# second_num = int(sys.argv[2])
+first_num = int(sys.argv[1])
+second_num = int(sys.argv[2])
 
-first_num = 5
-second_num = 11
+# first_num = 5
+# second_num = 11
 
 for num in range(first_num, second_num+1):
     if num > 1:
