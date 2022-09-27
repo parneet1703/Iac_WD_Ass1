@@ -33,6 +33,9 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: 3.9
+      env:
+        Number1: github.event.inputs.first_num
+        Number2: github.event.inputs.second_num
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -44,7 +47,7 @@ jobs:
         #   second_num: ${{ inputs.second_num }}
         #   path: ./pyprime.py
         run:
-          python pyprime.py ${{github.event.inputs.first_num}} ${{github.event.inputs.second_num}}
+          python pyprime.py ${Number1} ${github.event.inputs.second_num}
 
       # Runs a set of commands using the runners shell
       # - name: Run a multi-line script
